@@ -1,5 +1,5 @@
 var name;
-var health = 100;  
+var health = 100;
 
 var zombie = {
 	name: 'zombie',
@@ -29,6 +29,7 @@ var axe ={
 	info: "The mighty axe does a dammage of 35."
 }
 
+
 // make a shorter way to write console.log
 function con(str) {
 	console.log("=> " + str);
@@ -44,12 +45,12 @@ function chooseWeapon(choice) {
 			con("You have chosen the axe: " + axe.info);
 	}
  }
- 
+
 // gets the player name and welcomes them
 function greet(name) {
 	name = prompt('What is thine name young soldier?');
 	con("Welcome to oddvale, you have a torch and a potion in your inventory.")
-	con("You're starting health is 100");    	
+	con("You're starting health is 100");
  }
 
 // the forest of null, the first scene in the game
@@ -58,7 +59,7 @@ function forestOfNull() {
 	con("It's very dark and you can't even see in front of your nose, but you can feel a presence  touching you...");
  	    setTimeout(function() {
 	    	var choice = prompt("Do you light your torch and see what is touching you? or do you run for your life?");
-	    	
+
 	    	if (choice == 'run') {
 	    		con("You run as fast as you can but slam into an object, you are knocked out unconsious...");
 	    	} else {
@@ -66,8 +67,3 @@ function forestOfNull() {
 	    	}
     	}, 4000);
 }
-
-greet();
-chooseWeapon();
-
-
